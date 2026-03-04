@@ -1,0 +1,23 @@
+theme = "sonokai"
+
+[editor]
+line-number = "relative"
+shell = ["zsh", "-c"]
+bufferline = "multiple"
+
+[editor.cursor-shape]
+insert = "bar"
+normal = "block"
+
+[editor.file-picker]
+hidden = true
+
+[keys.normal]
+C-g = [
+    ":write-all",
+    ":insert-output lazygit >/dev/tty",
+    ":redraw",
+    ":reload-all"
+]
+C-p = ["half_page_up"]
+C-n = ["half_page_down"]
