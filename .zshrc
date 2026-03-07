@@ -102,4 +102,17 @@ fi
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+
+export COLORTERM=truecolor
+
 eval "$(starship init zsh)"
+eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
+
+if [ -n "$SHPOOL_SESSION_NAME" ] && [ -z "$SSH_CONNECTION" ]; then
+  export SSH_CONNECTION="shpool"
+fi
+
+. "$HOME/.local/bin/env"
+eval "$(uv generate-shell-completion zsh)"
+
+alias sdocker="newgrp docker"

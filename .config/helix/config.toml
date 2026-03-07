@@ -13,11 +13,9 @@ normal = "block"
 hidden = true
 
 [keys.normal]
-C-g = [
-    ":write-all",
-    ":insert-output lazygit >/dev/tty",
-    ":redraw",
-    ":reload-all"
-]
+C-g = [":sh shpool detach"]
 C-p = ["half_page_up"]
 C-n = ["half_page_down"]
+
+[keys.normal."C-w"]
+b = ":buffer-close"

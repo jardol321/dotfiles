@@ -1,5 +1,6 @@
 "$schema" = 'https://starship.rs/config-schema.json'
 format = """
+$custom\
 $username\
 $hostname\
 [ ](bold white)\
@@ -48,12 +49,14 @@ stashed = "≡"
 format = '\([$state( $progress_current/$progress_total)]($style)\) '
 style = "bright-black"
 
-[cmd_duration]
-format = "[$duration]($style) "
-style = "yellow"
-
 [python]
 format = "[$virtualenv]($style) "
 style = "bright-black"
 detect_extensions = []
 detect_files = []
+
+[custom.shpool]
+command = "echo $SHPOOL_SESSION_NAME"
+when = '[[ -n "$SHPOOL_SESSION_NAME" ]]'
+style = "bold cyan"
+format = "[$output]($style) "

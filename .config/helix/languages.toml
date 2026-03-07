@@ -7,6 +7,10 @@ auto-format = true
 command = "ruff"
 args = ["server"]
 
+[language-server.ruff.config.settings]
+fixAll = true
+organizeImports = true
+
 [language-server.pylsp.config.pylsp.plugins]
 ruff.enabled = false
 autopep8.enabled = false
@@ -17,18 +21,10 @@ pyflakes.enabled = false
 pylint.enabled = false
 yapf.enabled = false
 
-# [language-server.ruff.config.settings]
-# lineLength = 80
 
-# [language-server.ruff.config.settings.lint]
-# select = ["E4", "E7"]
-# preview = false
+[language-server.ruff.config.settings.lint]
+select = ["F401","E4", "E7"]
+preview = false
 
-# [language-server.ruff.config.settings.format]
-# preview = true
-
-# [language-server.pylsp.config.pylsp.plugins.ruff]
-# lineLength = 88
-# preview = true
-# select = ["E4", "E7", "E9", "F"] # Rules to be enabled by ruff
-# ignore = ["D210"] # Rules to be ignored by ruff
+[language-server.ruff.config.settings.format]
+preview = true
