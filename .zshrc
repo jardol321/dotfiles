@@ -105,7 +105,6 @@ fi
 
 export COLORTERM=truecolor
 
-eval "$(starship init zsh)"
 eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
 
 if [ -n "$SHPOOL_SESSION_NAME" ] && [ -z "$SSH_CONNECTION" ]; then
@@ -116,3 +115,7 @@ fi
 eval "$(uv generate-shell-completion zsh)"
 
 alias sdocker="newgrp docker"
+
+eval "$(starship init zsh)"
+
+export PATH="/nfs/home/jdolan/.pixi/bin:$PATH"
