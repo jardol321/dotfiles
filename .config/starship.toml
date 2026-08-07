@@ -3,7 +3,7 @@ format = """
 $custom\
 $username\
 $hostname\
-[ ](bold white)\
+[:](bold white)\
 $directory\
 $git_branch\
 $git_state\
