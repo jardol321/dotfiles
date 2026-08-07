@@ -105,13 +105,16 @@ fi
 
 export COLORTERM=truecolor
 
-eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
+if [ -x "/opt/homebrew/bin/brew" ]; then
+  eval "$(/opt/homebrew/bin/brew shellenv)"
+elif [ -x "/home/linuxbrew/.linuxbrew/bin/brew" ]; then
+  eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
+fi
 
 if [ -n "$SHPOOL_SESSION_NAME" ] && [ -z "$SSH_CONNECTION" ]; then
   export SSH_CONNECTION="shpool"
 fi
 
-. "$HOME/.local/bin/env"
 eval "$(uv generate-shell-completion zsh)"
 
 alias sdocker="newgrp docker"
