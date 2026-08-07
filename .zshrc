@@ -116,9 +116,6 @@ if [ -n "$SHPOOL_SESSION_NAME" ] && [ -z "$SSH_CONNECTION" ]; then
 fi
 
 eval "$(uv generate-shell-completion zsh)"
-
-alias sdocker="newgrp docker"
-
 eval "$(starship init zsh)"
-
+export STARSHIP_LOG="error"
 export PATH="/nfs/home/jdolan/.pixi/bin:$PATH"
