@@ -3,7 +3,7 @@ format = """
 $custom\
 $username\
 $hostname\
-[:](bold white)\
+[ ](bold white)\
 $directory\
 $git_branch\
 $git_state\
@@ -17,7 +17,7 @@ style = "blue"
 
 [username]
 format = "[$user]($style)"
-show_always = true
+ssh_only = true
 style_user = "bold yellow"
 
 [hostname]
