@@ -17,7 +17,6 @@ style = "blue"
 
 [username]
 format = "[$user]($style)"
-ssh_only = true
 style_user = "bold yellow"
 
 [hostname]
