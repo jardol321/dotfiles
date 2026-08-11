@@ -119,3 +119,5 @@ eval "$(uv generate-shell-completion zsh)"
 eval "$(starship init zsh)"
 export STARSHIP_LOG="error"
 export PATH="/nfs/home/jdolan/.pixi/bin:$PATH"
+
+. "$HOME/.local/bin/env"
