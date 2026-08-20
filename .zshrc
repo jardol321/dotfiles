@@ -120,4 +120,6 @@ eval "$(starship init zsh)"
 export STARSHIP_LOG="error"
 export PATH="/nfs/home/jdolan/.pixi/bin:$PATH"
 
-. "$HOME/.local/bin/env"
+if [ -f "$HOME/.local/bin/env" ]; then
+  . "$HOME/.local/bin/env"
+fi
